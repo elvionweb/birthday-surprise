@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Global enhancements */
+html,
+body {
+  scroll-behavior: smooth;
+   overflow-x: hidden;
+  background: black;
+}
+
+
+
+@theme {
+  --color-primary: #ff5ea8;
+  --color-secondary: #7c5cff;
+  --color-accent: #ffd166;
+
+  --breakpoint-xs: 360px;
+}
