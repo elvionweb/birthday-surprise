@@ -3,23 +3,25 @@ import { motion } from "framer-motion";
 import { Howl } from "howler";
 import { FaPlay, FaPause, FaHeart } from "react-icons/fa";
 
-
+import ChristinaPerri from "../assets/christina_perri_-_thousand_years_(mp3.pm).mp3";
+import BrrunoMars from "../assets/Bruno_Mars_-_Just_the_Way_You_Are_2010_(mp3.pm).mp3";
+import EddSheeran from "../assets/Edd_Sheeran_-_Perfect_(mp3.pm).mp3";
 
 const songs = [
   {
     title: "Song of Peace",
     note: "This one reminds me of your calm and beautiful heart.",
-    src: "/music/christina_perri_-_thousand_years.mp3",
+    src: ChristinaPerri,
   },
   {
     title: "Your Smile",
     note: "Whenever this plays, I think of your smile.",
-    src: "/music/bruno_mars_just_the_way_you_are.mp3",
+    src: BrrunoMars,
   },
   {
     title: "Forever Loved",
     note: "A reminder that you are deeply loved today and always.",
-    src: "/music/edd_sheeran_perfect.mp3",
+    src: EddSheeran,
   },
 ];
 
@@ -79,7 +81,7 @@ export default function DedicatedSongs() {
         } while (next === prev);
         return next;
       });
-    }, 3000); // change every 3 seconds
+    }, 3000); // change every 6 seconds
 
     return () => clearInterval(interval);
   }, [current]);
