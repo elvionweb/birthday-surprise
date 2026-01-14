@@ -3,14 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import memory1 from "../assets/memory1.jpeg";
 import memory2 from "../assets/memory2.jpeg";
-import seh from "../assets/seh.jpeg";
+import Seh from "../assets/Seh.jpeg";
 import memory3 from "../assets/Memory3.jpeg";
 
 // Add captions to each image
 const images = [
   { src: memory1, caption: "The first birthday 🎉", style: "text-pink-400" },
   { src: memory2, caption: "Funny moments 😂", style: "text-green-400" },
-  { src: seh, caption: "Family love ❤️", style: "text-blue-400" },
+  { src: Seh, caption: "Family love ❤️", style: "text-blue-400" },
   { src: memory3, caption: "Celebration vibes 🥳", style: "text-yellow-400" },
 ];
 
