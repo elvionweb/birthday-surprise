@@ -1,48 +1,72 @@
-import React, { useState } from "react";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import PasswordGate from "./components/PasswordGate";
 import Hero from "./components/Hero";
-import Fireworks from "./components/Fireworks";
-import MakeWish from "./components/MakeWish";
-import DiscoLights from "./components/Discolights";
 import Timeline from "./components/Timeline";
 import Gallery from "./components/Gallery";
-import { useMusic } from "./hooks/useMusic";
-import PasswordGate from "./components/PasswordGate";
-import Footer from "./components/Footer";
-import DedicatedSongs from "./components/DedicatedSongs";
 import EmotionalMessage from "./components/EmotionalMessage";
+import DedicatedSongs from "./components/DedicatedSongs";
+import MakeWish from "./components/MakeWish";
+import Footer from "./components/Footer";
+import Fireworks from "./components/Fireworks";
+import DiscoLights from "./components/Discolights";
+import { useMusic } from "./hooks/useMusic";
 
-export const App = () => {
-  const [accessGranted, setAccessGranted] = useState(false);
-  const [started, setStarted] = useState(false);
+
+export default function App() {
+  const navigate = useNavigate();
   const { play } = useMusic();
 
-  const start = () => {
-    setStarted(true);
-    play();
-  };
+  const accessGranted = localStorage.getItem("access") === "true";
 
-  if (!accessGranted) {
-    return <PasswordGate onAccessGranted={() => setAccessGranted(true)} />;
+  // 🔒 Protect routes
+  if (!accessGranted && window.location.pathname !== "/") {
+    return <Navigate to="/" replace />;
   }
 
   return (
-    <>
-      {started && <Fireworks />}
-      {started && <DiscoLights />}
-      {!started ? (
-        <Hero onStart={start} />
-      ) : (
-        <>
-          <Timeline />
-          <Gallery />
-          <EmotionalMessage />
-          <DedicatedSongs />
-          <MakeWish />
-          <Footer celebrant="Serah" />
-        </>
-      )}
-    </>
-  );
-};
+    <Routes>
+      {/* Password */}
+      <Route
+        path="/"
+        element={
+          <PasswordGate
+            onAccessGranted={() => {
+              localStorage.setItem("access", "true");
+              navigate("/hero");
+            }}
+          />
+        }
+      />
 
-export default App;
+      {/* Hero */}
+      <Route
+        path="/hero"
+        element={
+          <Hero
+            onStart={() => {
+              play();
+              navigate("/journey");
+            }}
+          />
+        }
+      />
+
+      {/* Journey */}
+      <Route
+        path="/journey"
+        element={
+          <>
+            <Fireworks />
+            <DiscoLights />
+            <Timeline />
+            <Gallery />
+            <EmotionalMessage />
+            <DedicatedSongs />
+            <MakeWish />
+            <Footer celebrant="Serah" />
+          </>
+        }
+      />
+    </Routes>
+  );
+}
