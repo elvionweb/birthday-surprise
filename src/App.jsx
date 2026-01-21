@@ -1,4 +1,6 @@
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 import PasswordGate from "./components/PasswordGate";
 import Hero from "./components/Hero";
 import Timeline from "./components/Timeline";
