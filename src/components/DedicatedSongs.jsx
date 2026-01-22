@@ -9,7 +9,7 @@ import EddSheeran from "../assets/Edd_Sheeran_-_Perfect_(mp3.pm).mp3";
 
 const songs = [
   {
-    title: "Song of Peace",
+    title: "A Thousand Years",
     note: "This one reminds me of your calm and beautiful heart.",
     src: ChristinaPerri,
   },
@@ -27,17 +27,17 @@ const songs = [
 
 // Background color gradients
 const bgColors = [
-  "from-black via-gray-900 to-black",           // dark
-  "from-blue-900 via-blue-700 to-blue-900",     // blue
+  "from-black via-gray-900 to-black", // dark
+  "from-blue-900 via-blue-700 to-blue-900", // blue
   "from-yellow-500 via-yellow-400 to-yellow-500", // yellow
-  "from-lime-600 via-lime-500 to-lime-600",    // lime green
+  "from-lime-600 via-lime-500 to-lime-600", // lime green
   "from-violet-700 via-purple-600 to-violet-700", // violet
-  "from-pink-700 via-pink-600 to-pink-700",    // pink
-  "from-cyan-600 via-cyan-500 to-cyan-600",    // cyan
-  "from-teal-600 via-teal-500 to-teal-600",    // teal
-   "from-yellow-500 via-yellow-400 to-yellow-500", // yellow
-   "from-lime-600 via-lime-500 to-lime-600",    // lime green
-  "from-blue-900 via-blue-700 to-blue-900",     // blue
+  "from-pink-700 via-pink-600 to-pink-700", // pink
+  "from-cyan-600 via-cyan-500 to-cyan-600", // cyan
+  "from-teal-600 via-teal-500 to-teal-600", // teal
+  "from-yellow-500 via-yellow-400 to-yellow-500", // yellow
+  "from-lime-600 via-lime-500 to-lime-600", // lime green
+  "from-blue-900 via-blue-700 to-blue-900", // blue
 ];
 
 export default function DedicatedSongs() {
@@ -99,7 +99,7 @@ export default function DedicatedSongs() {
           transition={{ duration: 0.8 }}
           className="text-3xl sm:text-4xl font-bold mb-4"
         >
-          Songs Just For You
+          Special Songs For You
         </motion.h2>
 
         <motion.p
@@ -109,7 +109,8 @@ export default function DedicatedSongs() {
           transition={{ delay: 0.3 }}
           className="text-sm sm:text-base opacity-80 mb-8"
         >
-          These songs were chosen with love play them and feel how special you are
+          These songs were chosen with love play them and feel how special you
+          are
         </motion.p>
 
         {/* Songs List */}
@@ -133,9 +134,7 @@ export default function DedicatedSongs() {
                     <FaHeart className="text-primary" />
                     {song.title}
                   </h3>
-                  <p className="text-sm opacity-80 mt-1">
-                    {song.note}
-                  </p>
+                  <p className="text-sm opacity-80 mt-1">{song.note}</p>
                 </div>
 
                 {/* Play / Pause */}

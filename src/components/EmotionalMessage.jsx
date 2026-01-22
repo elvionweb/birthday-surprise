@@ -4,9 +4,9 @@ import useTypewriter from "../hooks/useTypewriter";
 const message =`
 2Today is not just another day.
 It is a reminder that heaven smiled, and God said,
-Let her live. Let her grow. Let her shine.
+Let him live. Let him grow. Let him shine.
 
-Happy Birthday
+Happy Birthday Elvis
 
 As you read these words, pause for a moment…
 Breathe.
@@ -47,7 +47,7 @@ Thank God for life.
 Thank Him for another chapter.
 Thank Him for you.
 
-Happy Birthday
+Happy Birthday Elvis
 This year will be kind to you
 `;
 
@@ -65,7 +65,7 @@ export default function EmotionalMessage() {
         className="max-w-3xl text-center"
       >
         <h2 className="text-3xl pt-8 sm:text-4xl font-semibold text-white mb-4">
-          A Message For You
+          A Wonderful Reminder
         </h2>
 
         <p className="text-base sm:text-lg leading-snug text-gray-200 whitespace-pre-line">
