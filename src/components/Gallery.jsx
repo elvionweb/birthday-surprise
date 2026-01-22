@@ -8,18 +8,18 @@ import memory3 from "../assets/Memory3.jpeg";
 
 // Add captions to each image
 const images = [
-  { src: memory1, caption: "The first birthday 🎉", style: "text-pink-400" },
-  { src: memory2, caption: "Funny moments 😂", style: "text-green-400" },
-  { src: Seh, caption: "Family love ❤️", style: "text-blue-400" },
-  { src: memory3, caption: "Celebration vibes 🥳", style: "text-yellow-400" },
+  { src: memory1, caption: "Quiet strength, loud impact, proving them wrong every step of the way", style: "text-white" },
+  { src: memory2, caption: "The eyes show, the mind knows, the story proves the man. ", style: "text-white" },
+  { src: Seh, caption: "every scar is a story, Every story is power", style: "text-white" },
+  { src: memory3, caption: "King by mindset, warrior by action, gentle when chosing, fierce when required", style: "text-white" },
 ];
 
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className="py-5 pt-6 sm:py-4 md:py-14 overflow-hidden px-4 bg-blue-600">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-3 md:mb-12 text-white">
+    <section className="py-5 pt-5 sm:py-4 md:py-14 overflow-hidden px-4 bg-blue-600">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3 sm:mb-3 md:mb-12 text-white">
         Memories We Love
       </h2>
 

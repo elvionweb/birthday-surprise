@@ -109,7 +109,7 @@ export default function DedicatedSongs() {
           transition={{ delay: 0.3 }}
           className="text-sm sm:text-base opacity-80 mb-8"
         >
-          These songs were chosen with love play them and feel how special you are 💖
+          These songs were chosen with love play them and feel how special you are
         </motion.p>
 
         {/* Songs List */}

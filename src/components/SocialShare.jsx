@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa6";
 
 export default function SocialShare({
-  message = "🎉 I just received the sweetest birthday surprise! 💖",
+  message = "I just received the sweetest birthday surprise!",
 }) {
   const url = encodeURIComponent(window.location.href);
   const text = encodeURIComponent(message);
@@ -46,10 +46,10 @@ export default function SocialShare({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mt-6"
+      className="mt-3"
     >
       <p className="text-sm sm:text-base mb-4 opacity-90">
-        Share this joy 💕
+        Share this joy 
       </p>
 
       <div className="flex justify-center gap-4">

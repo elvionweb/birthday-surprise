@@ -63,7 +63,7 @@ export default function App() {
             <EmotionalMessage />
             <DedicatedSongs />
             <MakeWish />
-            <Footer celebrant="Serah" />
+            <Footer celebrant="Elvis" />
           </>
         }
       />

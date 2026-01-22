@@ -3,10 +3,10 @@ import SocialShare from "./SocialShare";
 import logos from "../assets/logos.jpg"; // 
 
 
-export default function Footer({ celebrant = "Sarah" }) {
+export default function Footer({ celebrant = "Elvis" }) {
   return (
     <footer className="bg-gradient-to-r from-primary via-secondary to-accent text-white">
-      <div className="max-w-6xl mx-auto px-4 py-6 text-center">
+      <div className="max-w-6xl mx-auto px-6 pt-5 md:pt-6 text-center">
         
         {/* Closing Message */}
         <motion.p
@@ -16,11 +16,11 @@ export default function Footer({ celebrant = "Sarah" }) {
           transition={{ duration: 0.6 }}
           className="text-lg sm:text-xl font-semibold"
         >
-          Thank you for being part of this special day
+          A special day for you
         </motion.p>
 
         {/* Divider */}
-        <div className="my-6 h-px bg-white/30 w-full max-w-md mx-auto" />
+        <div className="my-3 h-px bg-white/30 w-full max-w-md mx-auto" />
 
         {/* Personalized Wish */}
         <p className="text-sm sm:text-base opacity-90">
@@ -29,7 +29,7 @@ export default function Footer({ celebrant = "Sarah" }) {
         </p>
 
         {/* ✅ Social Share Buttons (BEST PLACE) */}
-        <SocialShare message="🎂 I just got the sweetest birthday surprise! 🎉" />
+        <SocialShare message="I just got the sweetest birthday surprise!" />
 
         {/* Builder Credit */}
         <p className="mt-6 text-xs sm:text-sm opacity-80 flex items-center justify-center gap-2">
@@ -38,7 +38,7 @@ export default function Footer({ celebrant = "Sarah" }) {
     alt="Elvionweb Logo"
     className="w-8 h-8 object-contain"
   />
-  Built with love by{" "}
+  Built by{" "}
   <a
     href="https://www.elvionweb.com"
     target="_blank"
